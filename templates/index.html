@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Audio NLP Processor</title>
+</head>
+<body>
+    <h1>Record Audio for Processing</h1>
+    <form method="POST">
+        <div class="recorder-container">
+            <button id="start-recording">Start Recording</button>
+            <button id="stop-recording" disabled>Stop Recording</button>
+            <span id="recording-timer">00:00</span>
+        </div>
+        
+        <audio id="audio-preview" controls style="display: none;"></audio>
+        <a id="download-audio" style="display: none;">Download Recording</a>
+        
+        <script src="{{ url_for('static', filename='js/recorder.js') }}"></script>
+    </form>
+</body>
+</html>

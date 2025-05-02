@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Results</title>
+</head>
+<body>
+    <h1>Processing Results</h1>
+    {% for lang, text in results.items() %}
+        <h2>{{ lang|title }} Summary</h2>
+        <p>{{ text }}</p>
+        <a href="/download/{{ lang }}_summary.txt" download>Download {{ lang|title }} Version</a>
+        <hr>
+    {% endfor %}
+</body>
+</html>
